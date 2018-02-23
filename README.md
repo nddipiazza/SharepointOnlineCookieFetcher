@@ -24,7 +24,12 @@ sudo chmod uog+rw /etc/mono/registry
 ```
 
 Run program:
+
+**Linux:**
 `./SharepointOnlineSecurityUtil -u youruser@yourdomain.com -w https://tenant.sharepoint.com`
+
+**Windows:**
+`SharepointOnlineSecurityUtil.exe -u youruser@yourdomain.com -w https://tenant.sharepoint.com`
 
 Enter a password when promped
 
