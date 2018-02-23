@@ -36,6 +36,8 @@ sudo mkdir /etc/mono/registry
 sudo chmod uog+rw /etc/mono/registry
 ```
 
+Failure to do this will result in `System.Security.SecurityException: No access to the given key ---> System.UnauthorizedAccessException: Access to the path "/etc/mono/registry" is denied.`
+
 Run program:
 
 **Linux and OSX:**
