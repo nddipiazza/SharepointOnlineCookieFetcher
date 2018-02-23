@@ -59,7 +59,7 @@ namespace SharepointOnlineCookieFetcher {
                 }
             }
             var credentials = new SharePointOnlineCredentials(userName, securePassword);
-            var authCookie = credentials.GetAuthenticationCookie(new Uri(webUri));
+            var authCookie = credentials.GetAuthenticationCookie(new Uri(webUri), true);
             Console.WriteLine("Full authCookie {0}", authCookie);
             return authCookie.TrimStart("SPOIDCRL=".ToCharArray());
         }
