@@ -3,7 +3,9 @@ Generates the SPOIDCRL for SharePoint online
 
 # Building
 ```
-cd SharepointOnlineCookieFetcher
+wget https://github.com/nddipiazza/SharepointOnlineCookieFetcher/archive/master.zip
+unzip master.zip
+cd SharepointOnlineCookieFetcher-master
 xbuild SharepointOnlineCookieFetcher.sln
 cd SharepointOnlineCookieFetcher
 mkbundle --simple --static --deps -L /home/ndipiazza/lucidworks/SharepointOnlineCookieFetcher/packages/Microsoft.SharePointOnline.CSOM.16.1.7317.1200/lib/net45 -L /home/ndipiazza/lucidworks/SharepointOnlineCookieFetcher/packages/Utility.CommandLine.Arguments.1.3.0/lib -o ./bin/Debug/SharepointOnlineSecurityUtil --config /etc/mono/config --machine-config /etc/mono/4.5/machine.config ./bin/Debug/SharepointOnlineCookieFetcher.exe
