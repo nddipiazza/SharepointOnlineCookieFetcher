@@ -36,12 +36,12 @@ mkdir /some/path/mono-registry
 chmod uog+rw /some/path/mono-registry
 ```
 
-Failure to do this will result in `System.Security.SecurityException: No access to the given key ---> System.UnauthorizedAccessException: Access to the path "/etc/mono/registry" is denied.`
-
 Run program:
 
 **Linux and OSX:**
 `MONO_REGISTRY_PATH=/some/path/mono-registry ./SharepointOnlineSecurityUtil -u youruser@yourdomain.com -w https://tenant.sharepoint.com`
+
+Failure to create the mono registry directory and set the environment variable for machines where mono-runtime is not installed will result in `System.Security.SecurityException: No access to the given key ---> System.UnauthorizedAccessException: Access to the path "/etc/mono/registry" is denied.`
 
 **Windows:**
 `SharepointOnlineSecurityUtil.exe -u youruser@yourdomain.com -w https://tenant.sharepoint.com`
