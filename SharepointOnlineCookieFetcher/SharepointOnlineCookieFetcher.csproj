@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{8FE7DE95-1ED3-4D02-A7F3-5A5D02B56412}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>SharepointOnlineCookieFetcher</RootNamespace>
+    <AssemblyName>SharepointOnlineCookieFetcher</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ExternalConsole>true</ExternalConsole>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ExternalConsole>true</ExternalConsole>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AnyCPU|AnyCPU' ">
+    <Optimize>false</Optimize>
+    <OutputPath>bin\AnyCPU</OutputPath>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="Utility.CommandLine.Arguments">
+      <HintPath>..\packages\Utility.CommandLine.Arguments.1.3.0\lib\Utility.CommandLine.Arguments.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Client.Policy">
+      <HintPath>..\packages\Microsoft.SharePointOnline.CSOM.16.1.7317.1200\lib\net45\Microsoft.Office.Client.Policy.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Client.TranslationServices">
+      <HintPath>..\packages\Microsoft.SharePointOnline.CSOM.16.1.7317.1200\lib\net45\Microsoft.Office.Client.TranslationServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.SharePoint.Tools">
+      <HintPath>..\packages\Microsoft.SharePointOnline.CSOM.16.1.7317.1200\lib\net45\Microsoft.Office.SharePoint.Tools.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Online.SharePoint.Client.Tenant">
+      <HintPath>..\packages\Microsoft.SharePointOnline.CSOM.16.1.7317.1200\lib\net45\Microsoft.Online.SharePoint.Client.Tenant.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ProjectServer.Client">
+      <HintPath>..\packages\Microsoft.SharePointOnline.CSOM.16.1.7317.1200\lib\net45\Microsoft.ProjectServer.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client">
+      <HintPath>..\packages\Microsoft.SharePointOnline.CSOM.16.1.7317.1200\lib\net45\Microsoft.SharePoint.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.DocumentManagement">
+      <HintPath>..\packages\Microsoft.SharePointOnline.CSOM.16.1.7317.1200\lib\net45\Microsoft.SharePoint.Client.DocumentManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Publishing">
+      <HintPath>..\packages\Microsoft.SharePointOnline.CSOM.16.1.7317.1200\lib\net45\Microsoft.SharePoint.Client.Publishing.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Runtime">
+      <HintPath>..\packages\Microsoft.SharePointOnline.CSOM.16.1.7317.1200\lib\net45\Microsoft.SharePoint.Client.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Runtime.Windows">
+      <HintPath>..\packages\Microsoft.SharePointOnline.CSOM.16.1.7317.1200\lib\net45\Microsoft.SharePoint.Client.Runtime.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Search.Applications">
+      <HintPath>..\packages\Microsoft.SharePointOnline.CSOM.16.1.7317.1200\lib\net45\Microsoft.SharePoint.Client.Search.Applications.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Search">
+      <HintPath>..\packages\Microsoft.SharePointOnline.CSOM.16.1.7317.1200\lib\net45\Microsoft.SharePoint.Client.Search.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Taxonomy">
+      <HintPath>..\packages\Microsoft.SharePointOnline.CSOM.16.1.7317.1200\lib\net45\Microsoft.SharePoint.Client.Taxonomy.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.UserProfiles">
+      <HintPath>..\packages\Microsoft.SharePointOnline.CSOM.16.1.7317.1200\lib\net45\Microsoft.SharePoint.Client.UserProfiles.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.WorkflowServices">
+      <HintPath>..\packages\Microsoft.SharePointOnline.CSOM.16.1.7317.1200\lib\net45\Microsoft.SharePoint.Client.WorkflowServices.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
