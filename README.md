@@ -30,10 +30,10 @@ Builds `SharepointOnlineCookieFetcher/bin/Debug/SharepointOnlineSecurityUtil`
 # Usage
 
 One Time Only Step for Linux users that do not have Mono-runtime installed: (see https://stackoverflow.com/questions/24872394/access-to-the-path-etc-mono-registry-is-denied)
+
 ```
-sudo mkdir /etc/mono
-sudo mkdir /etc/mono/registry
-sudo chmod uog+rw /etc/mono/registry
+mkdir /some/path/mono-registry
+chmod uog+rw /some/path/mono-registry
 ```
 
 Failure to do this will result in `System.Security.SecurityException: No access to the given key ---> System.UnauthorizedAccessException: Access to the path "/etc/mono/registry" is denied.`
@@ -41,7 +41,7 @@ Failure to do this will result in `System.Security.SecurityException: No access 
 Run program:
 
 **Linux and OSX:**
-`./SharepointOnlineSecurityUtil -u youruser@yourdomain.com -w https://tenant.sharepoint.com`
+`MONO_REGISTRY_PATH=/some/path/mono-registry ./SharepointOnlineSecurityUtil -u youruser@yourdomain.com -w https://tenant.sharepoint.com`
 
 **Windows:**
 `SharepointOnlineSecurityUtil.exe -u youruser@yourdomain.com -w https://tenant.sharepoint.com`
