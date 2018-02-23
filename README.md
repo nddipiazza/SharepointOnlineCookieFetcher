@@ -29,7 +29,7 @@ Builds `SharepointOnlineCookieFetcher/bin/Debug/SharepointOnlineSecurityUtil`
 
 # Usage
 
-One Time Only Step or Linux users: (see https://stackoverflow.com/questions/24872394/access-to-the-path-etc-mono-registry-is-denied)
+One Time Only Step for Linux users: (see https://stackoverflow.com/questions/24872394/access-to-the-path-etc-mono-registry-is-denied)
 ```
 sudo mkdir /etc/mono
 sudo mkdir /etc/mono/registry
@@ -38,7 +38,7 @@ sudo chmod uog+rw /etc/mono/registry
 
 Run program:
 
-**Linux:**
+**Linux and OSX:**
 `./SharepointOnlineSecurityUtil -u youruser@yourdomain.com -w https://tenant.sharepoint.com`
 
 **Windows:**
